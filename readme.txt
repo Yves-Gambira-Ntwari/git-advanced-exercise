@@ -1,2 +1,2 @@
 read me to stash
-merge the improved branch name
+merge the changed branch name
