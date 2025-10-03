@@ -214,7 +214,6 @@ git log --oneline
 git checkout <commit-hash>
  ```
 
-<<<<<<< HEAD
  ## Part 3: Advanced Workflows (10+ Challenges)
 #### 1. Stashing Changes:
 * Stashing is a way of saving you current work temporary
@@ -251,14 +250,21 @@ git checkout dev
 git merge ft/new-feature
 git commit -m"Solving conflicts"
 
-
  ```
-=======
 
+ #### 4. Resolving Merge Conflicts with a Merge Tool:
 
->>>>>>> ft/branch
+* Explore using a merge tool like git mergetool to help you visualize and resolve merge conflicts more efficiently.
 
-
+```bash
+git checkout dev
+git merge ft/new-feature
+git mergetool
+:diffget REMOTE
+:wq
+git commit -m"Merging the changes"
+ ```
+#### 5. Understanding Detached HEAD State:
 
 
 
