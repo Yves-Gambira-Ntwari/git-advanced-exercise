@@ -214,6 +214,7 @@ git log --oneline
 git checkout <commit-hash>
  ```
 
+<<<<<<< HEAD
  ## Part 3: Advanced Workflows (10+ Challenges)
 #### 1. Stashing Changes:
 * Stashing is a way of saving you current work temporary
@@ -252,6 +253,10 @@ git commit -m"Solving conflicts"
 
 
  ```
+=======
+
+
+>>>>>>> ft/branch
 
 
 
