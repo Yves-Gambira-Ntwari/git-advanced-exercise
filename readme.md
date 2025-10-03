@@ -214,11 +214,97 @@ git log --oneline
 git checkout <commit-hash>
  ```
 
+ ## Part 3: Advanced Workflows (10+ Challenges)
+#### 1. Stashing Changes:
+* Stashing is a way of saving you current work temporary
+* This used when you have an urgent work but you don't want to commit the current changes
+```bash
+git stash
+
+ ```
+
+#### 2. Retrieving Stashed Changes:
+* You can acces all stashed work
+* You can pop to the latest work stashed
+* You can also delete specific work from stash
+* Git stash helps to check all stashed works
+
+```bash
+git stash list
+git stash drop
+
+ ```
+#### 3. Branch Merging Conflicts (Continued):
+* Merge conflicts can arise when the same lines of code are modified in both branches being merged.
+* I checkout to feature branch and change samething
+* Merge changes to dev branch
+* Solv conflict by allowing incoming changes
 
 
 
+```bash
+git checkout ft/new-feature
+git add test5.md
+git commit -m"Solve conflicts"
+git checkout dev
+git merge ft/new-feature
+git commit -m"Solving conflicts"
 
+ ```
 
+ #### 4. Resolving Merge Conflicts with a Merge Tool:
+
+* Explore using a merge tool like git mergetool to help you visualize and resolve merge conflicts more efficiently.
+
+```bash
+git checkout dev
+git merge ft/new-feature
+git mergetool
+:diffget REMOTE
+:wq
+git commit -m"Merging the changes"
+ ```
+#### 5. Understanding Detached HEAD State:
+* This helps to move on the specific commit in a branch
+```bash
+git checkout <commit-hash>
+ ```
+ ####  6. Ignoring Files/Directories:
+ * You might have files or directories you don't want to track in Git. Create a .gitignore file to specify these exclusions.
+ * You just put the name of the file you want in this file
+ * This file will never stages or pushed on remote repository
+ #### 7. Working with Tags:
+ * Tags act like bookmarks in your Git history. Create a tag to mark a specific point in your development.
+ * Git tags helps to track the code version to the specific commit
+
+ ```bash
+git tag v1.1
+ ```
+
+ #### 8. Listing and deleting tags
+* List all tags 
+* You can delet the specific tag
+ 
+
+ ```bash
+git tag
+git tag  -d v1.1
+ ```
+
+#### 9. Pushing Local Work to Remote Repositories:
+* Once you're happy with your local changes and branches, it's time to share them with others.
+* Check if all you work ar commited
+* Then push all changes
+ ```bash
+ git status
+git push origin dev 
+ ```
+
+ #### 10. Pulling Changes from Remote Repositories:
+ * Collaboration often involves pulling changes from the remote repository made by others.
+ ```bash
+git pull origin dev
+```
 
 
 
